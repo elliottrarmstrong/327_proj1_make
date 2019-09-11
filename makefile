@@ -1,6 +1,6 @@
 #makefile
 #Elliott Armstrong -- elliott.armstrong.17@cnu.edu
-#Version 11/09/2019
+#Version 11.09.2019
 
 all: main.o myfunc.o
 	g++ -Wall -o myexe main.o myfunc.o
