@@ -1,7 +1,13 @@
 # makefile
 
-all: main.cpp
-	g++ -o myexe main.cpp myfunc.cpp myfunc.h
+all: main.o myfunc.o
+	g++ -Wall -o myexe main.o myfunc.o
+
+main.o: main.cpp myfunc.h
+	g++ -Wall -c main.cpp
+
+myfunc.o: myfunc.cpp myfunc.h
+	g++ -Wall -c myfunc.cpp
 
 clean:
-	$(RM) myexe
+	$(RM) *.o myexe
